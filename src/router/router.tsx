@@ -19,6 +19,9 @@ export const router = createBrowserRouter([
             },{
                 path:'experience',
                 element: <Pages.ExperienceWrapper /> 
+            },{
+                path:'contact',
+                element: <Pages.ContactWrapper /> 
             }
         ]
     },{

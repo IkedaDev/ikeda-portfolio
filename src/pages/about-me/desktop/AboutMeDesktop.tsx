@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Title } from "../../../components";
+import { Button, Navbar, Title } from "../../../components";
 import { SceneSprite, TREE_SPRITE } from "../../../interfaces/landscapes";
 import { GrassScene, Sprite } from "../../../components/landscapes";
 import { useNavigate } from "react-router-dom";
@@ -19,8 +19,9 @@ export const AboutMeDesktop: React.FC = () => {
                 <div className="fixed bottom-0 left-0 w-1/4">
                     <GrassScene></GrassScene>
                 </div>
-                <main className="w-1/2 bg-secondary px-20 lg:px-32 xl:px-40 flex flex-col justify-center">
-                    <div className="flex flex-col gap-20 mt-36 xl:mt-16">
+                <main className="w-1/2 bg-secondary flex flex-col justify-start ">
+                    <Navbar />
+                    <div className="flex flex-col gap-20 mt-36 xl:mt-16 px-20 lg:px-32 xl:px-40">
                         <Title header="h3">Acerca de mi</Title>
                         <div className="text-3xl mb-16 flex flex-col gap-y-8 ">
                             <p>

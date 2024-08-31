@@ -1,3 +1,5 @@
-export * from './button/button'
+export * from './button/Button'
 export * from './title/Title'
 export * from './display-button/DisplayButton'
+export * from './icon-card/IconCard'
+export * from './navbar/Navbar'

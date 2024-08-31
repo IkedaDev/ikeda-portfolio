@@ -1,10 +1,10 @@
 export interface Experience {
     id: string
-    button: { label: string, selected: boolean }
-    text:string,
+    button: { label: string }
+    information:string,
     period:{
         show: boolean,
         start: Date 
-        end: Date 
+        end?: Date 
     }
 }

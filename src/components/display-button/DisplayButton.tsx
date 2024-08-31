@@ -1,14 +1,14 @@
 import React from "react";
-import Icon from "../../assets/images/icons/arrow.png";
+import Icon from "../../assets/images/icons/arrow-02.svg";
 
 interface Props{
     label: string,
-    iconOrientation?: 'right',
+    iconOrientation?: 'right' | 'bottom'
     selected?: boolean,
     handlerClick?: () => void,
 }
 
-export const DisplayButton: React.FC<Props> = ({ handlerClick = () => {}, ...props}: Props) => {
+export const DisplayButton: React.FC<Props> = ({ handlerClick = () => {}, iconOrientation = 'right', ...props}: Props) => {
     return(<>
         <div 
             className={`
@@ -24,7 +24,9 @@ export const DisplayButton: React.FC<Props> = ({ handlerClick = () => {}, ...pro
                 props.selected &&
                 (
                     <span>
-                        <img src={Icon} alt="Icon" />
+                        <img src={Icon} alt="Icon" className={`
+                                ${iconOrientation == "bottom" && 'rotate-90' }
+                            `} />
                     </span>
                 )
             }

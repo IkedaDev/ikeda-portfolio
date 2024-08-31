@@ -1,14 +1,10 @@
-interface Data {
-    id: string
-    button: { label: string, selected: boolean }
-    text:string
-}
+import { Knowledge } from "../../interfaces";
 
-export const data: Data[] = [
+export const data: Knowledge[] = [
     {
         id:'1',
-        button: { label: 'Paginas / Aplicaciones Web', selected: true },
-        text: `
+        button: { label: 'Paginas / Aplicaciones Web' },
+        information: `
             Cuento con conocimientos para crear paginas web con librerias reactivas como Angular, React y VueJS.
             Se utilizar gestores de estados como Redux para manejar el estado de las aplicaciones.
             Implementacion de WebSockets para comunicacion en tiempo real entre aplicaciones.
@@ -17,22 +13,22 @@ export const data: Data[] = [
     },
     {
         id:'3',
-        button: { label: 'Servicios APIS Rest FULL', selected: false },
-        text: '3'
+        button: { label: 'Servicios APIS Rest FULL' },
+        information: '3'
     },
     {
         id:'4',
-        button: { label: 'Microservicios', selected: false },
-        text: '4'
+        button: { label: 'Microservicios' },
+        information: '4'
     },
     {
         id:'5',
-        button: { label: 'Arquitectura', selected: false },
-        text: '5'
+        button: { label: 'Arquitectura' },
+        information: '5'
     },
     {
         id:'6',
-        button: { label: 'Deployment', selected: false },
-        text: '6'
+        button: { label: 'Deployment' },
+        information: '6'
     },
 ]

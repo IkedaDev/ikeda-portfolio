@@ -8,6 +8,8 @@ export enum TREE_SPRITE{
 
 export enum FARMING{
     BARN_01 = "FARMING_BARN_01",
+    GIRL_SCARECROW = "FARMING_GIRL_SCARECROW",
+    BOY_SCARECROW = "FARMING_BOY_SCARECROW",
 }
 
 export interface SpriteProps{

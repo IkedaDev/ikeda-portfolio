@@ -10,6 +10,7 @@ export default {
         primary: 'var(--primary-color)',
         secondary: 'var(--secondary-color)',
         'ike-yellow': '#F9EF05',
+        'ike-cyan':'#5BE1C6',
       },
       fontFamily: {
         base: 'var(--font-base)',

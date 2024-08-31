@@ -9,5 +9,5 @@ export enum ICON_CARD_IMAGE{
 
 export interface IconCardProps{
     icon: ICON_CARD_IMAGE,
-    label: string
+    label?: string
 }
