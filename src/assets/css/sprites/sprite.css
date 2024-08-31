@@ -1,0 +1,11 @@
+.sprite{
+    background-image: var(--image) ;
+    width: var(--width);
+    height: var(--height);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left bottom; 
+    position: absolute;
+    bottom: -7.5vh;
+    left: var(--left);
+}

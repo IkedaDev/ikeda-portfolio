@@ -1,9 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
+import { Title, DisplayButton, Button } from "../../../components";
+import { GrassScene, Sprite } from "../../../components/landscapes";
+import { FARMING, SceneSprite } from "../../../interfaces/landscapes";
+import { data } from "./data";
+import { useNavigate } from "react-router-dom";
 
 export const KnowledgeDesktop: React.FC = () => {
-    return (
-        <>
-            Desktop Knowledge
-        </>
-    )
+
+    const navigate = useNavigate()
+    const handlerClickExperience = () => navigate('/experience')
+
+    const sprite: SceneSprite[] = [
+        { sprite: <Sprite position={55} component={FARMING.BARN_01} size={{height:{value:350,unit:'px'}, width:{ value:200, unit:'px'}}} /> }
+    ]
+
+    const [knowledges, setKnowledges] = useState(data)
+
+    const handlerClick = (index: number) => {
+        
+        setKnowledges(prevButtons =>
+            prevButtons.map((knowledge, i) => ({
+                ...knowledge,
+                button:{
+                    ...knowledge.button,
+                    selected: i === index
+                }
+            }))
+        );
+        
+    }
+
+    
+
+    return (<>
+        <div className="h-screen flex">
+            <main className="h-full w-1/2 bg-secondary flex flex-col justify-center gap-20 md:px-24 lg:px-32 xl:px-40">
+                <Title header="h3">Conocimientos</Title>
+                <div className="flex w-full gap-8 flex-col">
+                    {
+                        knowledges.map((props, index)=> (
+                            <DisplayButton key={index} {...props.button} handlerClick={() => handlerClick(index)}/>
+                        ))
+                    }
+                </div>
+                <div>
+                    <Button handlerClick={handlerClickExperience} >Experiencia</Button>
+                </div>
+            </main>
+            <aside className="w-1/2">
+                <div 
+                className="flex flex-col justify-center items-center h-[70vh] text-3xl leading-[3rem] md:px-24 lg:px-32 xl:px-40 "
+                dangerouslySetInnerHTML={{
+                    __html: knowledges.find(({ button }) => button.selected)?.text || ""
+                }}
+                >
+                </div>
+                <div className="fixed bottom-0 right-0 w-1/2">
+                    <GrassScene sprites={sprite} />
+                </div>
+            </aside>
+        </div>
+    </>)
 }

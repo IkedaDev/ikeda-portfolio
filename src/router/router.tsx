@@ -1,6 +1,6 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import Base from "../layouts/base/Base";
-import { WelcomeWrapper, AboutMeWrapper } from "../pages";
+import * as Pages from "../pages";
 
 export const router = createBrowserRouter([
     {
@@ -9,11 +9,17 @@ export const router = createBrowserRouter([
         children:[
             {
                 path:'',
-                element: <WelcomeWrapper />
+                element: <Pages.WelcomeWrapper />
             },{
                 path:'me',
-                element: <AboutMeWrapper />
-            },
+                element: <Pages.AboutMeWrapper />
+            },{
+                path:'knowledge',
+                element: <Pages.KnowledgeWrapper />
+            },{
+                path:'experience',
+                element: <Pages.ExperienceWrapper /> 
+            }
         ]
     },{
         path:'*',

@@ -1,12 +1,24 @@
 import React from "react";
 import { Button } from "../../../components";
+import { useNavigate } from "react-router-dom";
+import { SceneSprite } from "../../../interfaces/landscapes";
+import { GrassScene } from "../../../components/landscapes";
 
 
 export const WelcomeDesktop: React.FC = () => {
+    
+    const navigate = useNavigate()
+    const handlerClick = () => navigate('/me')
+
+    const sprites: SceneSprite[] = []
+
     return (
         <>
             <div className="h-screen flex">
                 <main className="h-full w-1/2 flex justify-center items-center">
+                    <div className="absolute bottom-0 left-0 w-[100vw]">
+                        <GrassScene sprites={sprites}></GrassScene>
+                    </div>
                     <div className="w-3/4">
                         <div className="text-7xl font-bold">
                             <p className="">Hola!</p>
@@ -18,7 +30,9 @@ export const WelcomeDesktop: React.FC = () => {
                             a lo cual me he dedicado durante casi 3 años. A lo largo de este tiempo, he tenido la oportunidad 
                             de trabajar en diversos proyectos que han enriquecido mi experiencia y habilidades en el ámbito de la programación.
                         </p>
-                        <Button value="Caminemos!" />
+                        <Button handlerClick={handlerClick} >
+                            Caminemos!
+                        </Button>
                     </div>
                 </main>
                 <aside className="bg-secondary w-1/2 h-full relative flex justify-center">

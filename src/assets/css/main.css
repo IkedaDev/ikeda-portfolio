@@ -2,3 +2,5 @@
 @import "./fonts/istok-web.css";
 @import "./variables/variables.css";
 @import "./base/index.css";
+@import "./scenes/scenes.css";
+@import "./sprites/sprite.css";
