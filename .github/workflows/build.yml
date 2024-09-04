@@ -40,6 +40,9 @@ jobs:
         VITE_TABLET_SIZE: ${{ secrets.VITE_TABLET_SIZE }} # o ${ env.VITE_TABLET_SIZE } si están definidas en el flujo de trabajo
         VITE_DESKTOP_SIZE: ${{ secrets.VITE_DESKTOP_SIZE }}
       run: |
+        echo "VITE_TABLET_SIZE: $VITE_TABLET_SIZE"
+        echo "VITE_DESKTOP_SIZE: $VITE_DESKTOP_SIZE"
+
         docker buildx build \
         --build-arg VITE_TABLET_SIZE=$VITE_TABLET_SIZE \
         --build-arg VITE_DESKTOP_SIZE=$VITE_DESKTOP_SIZE \
