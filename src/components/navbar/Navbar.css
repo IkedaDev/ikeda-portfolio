@@ -1,5 +1,5 @@
 .navbar::-webkit-scrollbar {
-    height: 0;
+    height: 6px;
 }
 
 .navbar::-webkit-scrollbar-track {

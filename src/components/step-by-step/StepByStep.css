@@ -1,0 +1,10 @@
+.StepByStep::before{
+    content: '';
+    width: 100%;
+    height: 1px;
+    z-index: -1;
+    position: absolute;
+    background: #000;
+    right: 0;
+    top: calc(50% );
+}

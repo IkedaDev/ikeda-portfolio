@@ -1,6 +1,6 @@
 import { Title,IconCard, DisplayButton, Button, Navbar  } from "../../../components"
 import { GrassScene, Sprite } from "../../../components/landscapes"
-import { ICON_CARD_IMAGE } from "../../../interfaces"
+import { ICON_CARD_IMAGE } from "../../../interfaces/components"
 import { FARMING, SceneSprite } from "../../../interfaces/landscapes"
 
 export const ContactDesktop: React.FC = () => {
@@ -27,13 +27,14 @@ export const ContactDesktop: React.FC = () => {
                             <IconCard icon={ICON_CARD_IMAGE.TIKTOK} />
                         </div>
                     </div>
-                    <div>
+                    <div className="w-1/2">
                         <Button>Descargar CV</Button>
                     </div>
                 </div>
                 <div className="h-full w-1/2  ">
                     <Navbar />
                     <div className="flex flex-col justify-center h-[70vh] items-center text-3xl leading-[3rem] md:px-24 lg:px-32 xl:px-40 relative z-10">
+                        <p className="font-bold text-[6rem] text-red-900">Elizabeth</p>
                     </div>
                     <div className="fixed bottom-0 right-0 w-1/2">
                         <GrassScene  sprites={sprites}/>

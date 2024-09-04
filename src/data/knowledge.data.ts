@@ -1,4 +1,4 @@
-import { Knowledge } from "../../interfaces";
+import { Knowledge } from "../interfaces";
 
 export const data: Knowledge[] = [
     {

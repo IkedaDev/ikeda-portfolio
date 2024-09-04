@@ -12,7 +12,7 @@ export const Button: React.FC<Props> = ({children, type = 'button', handlerClick
         <button 
             type={type} 
             onClick={handlerClick}
-            className="bg-primary text-white rounded-2xl h-16 font-bold px-12 text-3xl outline-none lg:px-28"
+            className="bg-primary text-white rounded-2xl h-16 font-bold text-3xl outline-none min-w-min w-full text-center px-8"
         >
             {children}
         </button>

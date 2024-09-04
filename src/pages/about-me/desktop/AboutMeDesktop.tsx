@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Navbar, Title } from "../../../components";
 import { SceneSprite, TREE_SPRITE } from "../../../interfaces/landscapes";
 import { GrassScene, Sprite } from "../../../components/landscapes";
 import { useNavigate } from "react-router-dom";
+import { data } from "../../../data/aboutme.interface";
 
 export const AboutMeDesktop: React.FC = () => {
+
+    const [ aboutMeParagraph, _ ] = useState<string[]>(data)
     
     const navigate = useNavigate()
     const handlerClick = () => navigate('/knowledge')
@@ -21,29 +24,15 @@ export const AboutMeDesktop: React.FC = () => {
                 </div>
                 <main className="w-1/2 bg-secondary flex flex-col justify-start ">
                     <Navbar />
-                    <div className="flex flex-col gap-20 mt-36 xl:mt-16 px-20 lg:px-32 xl:px-40">
+                    <div className="flex flex-col gap-20 mt-20 xl:mt-16 px-20 lg:px-32 xl:px-40">
                         <Title header="h3">Acerca de mi</Title>
                         <div className="text-3xl mb-16 flex flex-col gap-y-8 ">
-                            <p>
-                                ¡Hola! Soy Sebastián Torrealba y tengo 23 años. Mi viaje en el mundo de la 
-                                programación comenzó cuando tenía 16 años. Aunque al principio creaba cosas 
-                                que podrían considerarse innecesarias, disfrutaba cada momento y fui, 
-                                en su mayoría, autodidacta.
-                            </p>
-                            <p>
-                                A los 18 años, decidí estudiar Ingeniería en Informática, carrera que terminé 
-                                a los 22 años. En el tercer año de carrera obtuve mi primer trabajo como programador. 
-                                Desde entonces, he seguido desarrollándome como profesional en el campo del desarrollo web.
-                            </p>
-                            <p>
-                                Me considero una persona alegre que siempre busca lo mejor de cada situación. 
-                                Me encanta trabajar en equipo y disfrutar del proceso colaborativo. Además, 
-                                soy una persona tranquila. Valoro la creatividad y la innovación, y 
-                                siempre estoy dispuesto a aprender de los demás.
-                            </p>
+                            {
+                                aboutMeParagraph.map( (p, i) => <p key={i}>{p}</p> )
+                            }
                         </div>
                     </div>
-                    <div className="flex justify-center lg:mt-16 pb-12">
+                    <div className="lg:mt-16 mb-12 w-1/2 mx-auto">
                         <Button handlerClick={handlerClick}>Conocimientos</Button>
                     </div>
                 </main>

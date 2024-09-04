@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { GrassScene, Sprite } from "../../../components/landscapes";
 import { SceneSprite, TREE_SPRITE } from "../../../interfaces/landscapes";
-import { Button, DisplayButton, Title } from "../../../components";
-import { data } from "../data";
+import { Button, DisplayButton, Navbar, Title } from "../../../components";
 import { Experience } from "../../../interfaces";
 import moment from "moment";
+import { data } from "../../../data/experience.data";
 
 export const ExperienceDesktop: React.FC = () => {
 
@@ -44,12 +44,13 @@ export const ExperienceDesktop: React.FC = () => {
                             ))
                         }
                     </div>
-                    <div>
+                    <div className="w-1/2">
                         <Button handlerClick={handlerClickContact} >Contacto</Button>
                     </div>
                 </div>
                 <div className="h-full w-1/2  ">
-                    <div className="flex flex-col justify-center h-[70vh] items-center text-3xl leading-[3rem] md:px-24 lg:px-32 xl:px-40 relative z-10">
+                    <Navbar />
+                    <div className="flex flex-col justify-start mt-12 h-[70vh] items-center text-3xl leading-[3rem] md:px-24 lg:px-32 xl:px-40 relative z-10">
                         { experienceSelected && (<>
                                 { experienceSelected.period.show && (
                                     <p className="flex gap-16 mb-8">

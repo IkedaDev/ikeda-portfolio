@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Title, DisplayButton, Button, Navbar } from "../../../components";
 import { GrassScene, Sprite } from "../../../components/landscapes";
 import { FARMING, SceneSprite } from "../../../interfaces/landscapes";
-import { data } from "../data";
+
 import { useNavigate } from "react-router-dom";
 import { Knowledge } from "../../../interfaces";
+import { data } from "../../../data/knowledge.data";
 
 export const KnowledgeDesktop: React.FC = () => {
 
@@ -18,6 +19,10 @@ export const KnowledgeDesktop: React.FC = () => {
     const [knowledges, _] = useState<Knowledge[]>(data)
     const [knowledgeSelected, setKnowledgeSelected] = useState<Knowledge | null>(null)
 
+    useEffect(()=>{
+        setKnowledgeSelected(knowledges[0])
+    }, [])
+
     const handlerClick = (knowledge: Knowledge) => {
         setKnowledgeSelected(knowledge)
     }    
@@ -29,11 +34,16 @@ export const KnowledgeDesktop: React.FC = () => {
                 <div className="flex w-full gap-8 flex-col">
                     {
                         knowledges.map((knowledge, index)=> (
-                            <DisplayButton key={index} {...knowledge.button} handlerClick={() => handlerClick(knowledge)}/>
+                            <DisplayButton 
+                                key={index} 
+                                {...knowledge.button} 
+                                handlerClick={() => handlerClick(knowledge)}
+                                selected={ knowledgeSelected?.id === knowledge.id } 
+                                />
                         ))
                     }
                 </div>
-                <div>
+                <div className="w-1/2">
                     <Button handlerClick={handlerClickExperience} >Experiencia</Button>
                 </div>
             </main>

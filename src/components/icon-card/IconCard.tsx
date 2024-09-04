@@ -1,5 +1,5 @@
 import React from "react";
-import { ICON_CARD_IMAGE, IconCardProps } from "../../interfaces";
+import { ICON_CARD_IMAGE, IconCardProps } from "../../interfaces/components";
 
 import WHATSAPP from "../../assets/images/icons/whatsapp.svg"
 import GMAIL from "../../assets/images/icons/gmail.svg"

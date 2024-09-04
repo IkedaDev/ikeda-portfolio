@@ -1,4 +1,4 @@
-import { Experience } from "../../interfaces";
+import { Experience } from "../interfaces";
 
 
 export const data: Experience[] = [
@@ -21,7 +21,7 @@ export const data: Experience[] = [
     },{
         id:'2',
         button: { label: 'Nexia' },
-        period:{ start: new Date("01-01-2022"), end: new Date("01-02-2023"), show: true },
+        period:{ start: new Date("07-01-2023"), end: new Date("11-01-2023"), show: true },
         information: `
             <p>Durante mi tiempo trabajando para <strong>Nexia</strong> estuve a cargo de crear un sistema para un <strong>supermercado</strong>, que tuviera <strong>gestión de tickets</strong> de reclamos, <strong>mantenciones de maquinaria</strong>, <strong>generador de reportes</strong>, y <strong>mantención de usuarios y locales.</strong></p>
             <br />
