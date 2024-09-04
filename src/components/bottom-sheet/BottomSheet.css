@@ -1,0 +1,17 @@
+.BottomSheet::-webkit-scrollbar {
+    height: 6px;
+}
+
+.BottomSheet::-webkit-scrollbar-track {
+    background: #ad373700;
+}
+
+.BottomSheet::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+    border: 1px solid #f1f1f1;
+}
+
+.BottomSheet::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}

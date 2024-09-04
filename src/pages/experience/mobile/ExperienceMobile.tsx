@@ -4,7 +4,7 @@ import { SceneSprite, TREE_SPRITE } from "@/interfaces/landscapes";
 import { GrassScene, Sprite } from "@/components/landscapes";
 import { Experience } from "@/interfaces";
 import { data } from "@/data/experience.data";
-import { Button, DisplayButton, Title } from "@/components";
+import { BottomSheet, Button, DisplayButton, Title } from "@/components";
 
 export const ExperienceMobile: React.FC = () => {
 
@@ -15,14 +15,16 @@ export const ExperienceMobile: React.FC = () => {
         { sprite: <Sprite position={70} component={TREE_SPRITE.TWO_PINES} size={{height:{value:150,unit:'px'}, width:{ value:100, unit:'px'}}} /> }
     ]
 
+    const [ openBottomSheet, setOpenBottomSheet ] = useState<boolean>(false)
     const [experiences, _] = useState<Experience[]>(data)
-    const [ __, setExperienceSelected ] = useState<Experience | null>(null)
+    const [ experienceSelected, setExperienceSelected ] = useState<Experience | null>(null)
 
     useEffect(()=>{
         setExperienceSelected(experiences[0])
     }, [])
 
     const handlerClick = (experience: Experience) => {
+        setOpenBottomSheet(true)
         setExperienceSelected(experience)
     }
     
@@ -50,6 +52,9 @@ export const ExperienceMobile: React.FC = () => {
             </div>
                             
         </main>
+        <BottomSheet title={experienceSelected?.button.label || ''} open={openBottomSheet} setOpen={setOpenBottomSheet}>
+            <div dangerouslySetInnerHTML={{ __html: experienceSelected?.information || '' }}></div>    
+        </BottomSheet>
         <footer className="w-full absolute bottom-0 left-0">
             <GrassScene sprites={sprites}/>
         </footer>

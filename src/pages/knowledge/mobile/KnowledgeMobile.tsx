@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, DisplayButton, Title } from "@/components";
+import { BottomSheet, Button, DisplayButton, Title } from "@/components";
 import { GrassScene, Sprite } from "@/components/landscapes";
 import { Knowledge } from "@/interfaces";
 import { data } from "@/data/knowledge.data";
@@ -11,14 +11,16 @@ export const KnowledgeMobile: React.FC = () => {
     const navigate = useNavigate()
     const handlerClickExperience = () => navigate('/experience')
 
+    const [ openBottomSheet, setOpenBottomSheet ] = useState<boolean>(false)
     const [knowledges, _] = useState<Knowledge[]>(data)
-    const [__, setKnowledgeSelected] = useState<Knowledge | null>(null)
+    const [ knowledgeSelected , setKnowledgeSelected] = useState<Knowledge | null>(null)
 
     const sprites: SceneSprite[] = [
         { sprite: <Sprite position={60} component={FARMING.BOY_SCARECROW} size={{height:{value:150,unit:'px'}, width:{ value:100, unit:'px'}}} /> }
     ]
 
     const handlerClick = (knowledge: Knowledge) => {
+        setOpenBottomSheet(true)
         setKnowledgeSelected(knowledge)
     }    
 
@@ -43,9 +45,11 @@ export const KnowledgeMobile: React.FC = () => {
                 <Button handlerClick={handlerClickExperience}>
                     Experiencia
                 </Button>
-            </div>
-                            
+            </div>            
         </main>
+        <BottomSheet title={knowledgeSelected?.button.label || ''} open={openBottomSheet} setOpen={setOpenBottomSheet}>
+            <div dangerouslySetInnerHTML={{ __html: knowledgeSelected?.information || '' }}></div>    
+        </BottomSheet>  
         <footer className="w-full absolute bottom-0 left-0">
             <GrassScene sprites={sprites}/>
         </footer>
