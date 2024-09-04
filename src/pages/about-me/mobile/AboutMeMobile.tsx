@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { GrassScene, Sprite } from "../../../components/landscapes";
-import { Button, NavbarMobile, StepByStep, Title } from "../../../components";
-import { data } from "../../../data/aboutme.interface";
+import { GrassScene, Sprite } from "@/components/landscapes";
+import { Button, NavbarMobile, StepByStep, Title } from "@/components";
+import { data } from "@/data/aboutme.interface";
 import { useNavigate } from "react-router-dom";
-import { StepProps } from "../../../interfaces/components";
-import { FARMING, SceneSprite, TREE_SPRITE } from "../../../interfaces/landscapes";
+import { StepProps } from "@/interfaces/components";
+import { FARMING, SceneSprite, TREE_SPRITE } from "@/interfaces/landscapes";
 
 export const AboutMeMobile: React.FC = () => {
 

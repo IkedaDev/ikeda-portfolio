@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { SceneSprite, TREE_SPRITE } from "../../../interfaces/landscapes";
-import { GrassScene, Sprite } from "../../../components/landscapes";
-import { Experience } from "../../../interfaces";
-import { data } from "../../../data/experience.data";
-import { Button, DisplayButton, NavbarMobile, Title } from "../../../components";
+import { SceneSprite, TREE_SPRITE } from "@/interfaces/landscapes";
+import { GrassScene, Sprite } from "@/components/landscapes";
+import { Experience } from "@/interfaces";
+import { data } from "@/data/experience.data";
+import { Button, DisplayButton, NavbarMobile, Title } from "@/components";
 
 export const ExperienceMobile: React.FC = () => {
 

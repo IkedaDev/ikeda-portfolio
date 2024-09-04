@@ -1,6 +1,6 @@
 import React from "react";
-import { DeviceDetector } from "../../../utils";
-import { useWindowWidth } from "../../../hooks/useWindowWidth";
+import { DeviceDetector } from "@/utils";
+import { useWindowWidth } from "@/hooks/useWindowWidth";
 import { WelcomeMobile } from "../mobile/WelcomeMobile";
 import { WelcomeDesktop } from "../desktop/WelcomeDesktop";
 

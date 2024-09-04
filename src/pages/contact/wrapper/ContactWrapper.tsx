@@ -1,5 +1,5 @@
-import { useWindowWidth } from "../../../hooks/useWindowWidth";
-import { DeviceDetector } from "../../../utils";
+import { useWindowWidth } from "@/hooks/useWindowWidth";
+import { DeviceDetector } from "@/utils";
 import { ContactDesktop } from "../desktop/ContactDesktop";
 import { ContactMobile } from "../mobile/ContactMobile";
 

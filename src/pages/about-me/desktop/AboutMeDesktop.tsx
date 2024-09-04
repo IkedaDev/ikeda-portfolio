@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Button, Navbar, Title } from "../../../components";
-import { SceneSprite, TREE_SPRITE } from "../../../interfaces/landscapes";
-import { GrassScene, Sprite } from "../../../components/landscapes";
+import { Button, Navbar, Title } from "@/components";
+import { SceneSprite, TREE_SPRITE } from "@/interfaces/landscapes";
+import { GrassScene, Sprite } from "@/components/landscapes";
 import { useNavigate } from "react-router-dom";
-import { data } from "../../../data/aboutme.interface";
+import { data } from "@/data/aboutme.interface";
 
 export const AboutMeDesktop: React.FC = () => {
 

@@ -1,7 +1,7 @@
-import { Title,IconCard, DisplayButton, Button, Navbar  } from "../../../components"
-import { GrassScene, Sprite } from "../../../components/landscapes"
-import { ICON_CARD_IMAGE } from "../../../interfaces/components"
-import { FARMING, SceneSprite } from "../../../interfaces/landscapes"
+import { Title,IconCard, DisplayButton, Button, Navbar  } from "@/components"
+import { GrassScene, Sprite } from "@/components/landscapes"
+import { ICON_CARD_IMAGE } from "@/interfaces/components"
+import { FARMING, SceneSprite } from "@/interfaces/landscapes"
 
 export const ContactDesktop: React.FC = () => {
 

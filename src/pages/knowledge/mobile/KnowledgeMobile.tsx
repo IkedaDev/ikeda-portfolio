@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Button, DisplayButton, NavbarMobile, Title } from "../../../components";
-import { GrassScene, Sprite } from "../../../components/landscapes";
-import { Knowledge } from "../../../interfaces";
-import { data } from "../../../data/knowledge.data";
-import { FARMING, SceneSprite } from "../../../interfaces/landscapes";
+import { Button, DisplayButton, NavbarMobile, Title } from "@/components";
+import { GrassScene, Sprite } from "@/components/landscapes";
+import { Knowledge } from "@/interfaces";
+import { data } from "@/data/knowledge.data";
+import { FARMING, SceneSprite } from "@/interfaces/landscapes";
 import { useNavigate } from "react-router-dom";
 
 export const KnowledgeMobile: React.FC = () => {

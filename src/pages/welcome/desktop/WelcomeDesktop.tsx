@@ -1,8 +1,8 @@
 import React from "react";
-import { Button, Navbar } from "../../../components";
+import { Button, Navbar } from "@/components";
 import { useNavigate } from "react-router-dom";
-import { SceneSprite } from "../../../interfaces/landscapes";
-import { GrassScene } from "../../../components/landscapes";
+import { SceneSprite } from "@/interfaces/landscapes";
+import { GrassScene } from "@/components/landscapes";
 
 
 export const WelcomeDesktop: React.FC = () => {

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { GrassScene, Sprite } from "../../../components/landscapes";
-import { SceneSprite, TREE_SPRITE } from "../../../interfaces/landscapes";
-import { Button, DisplayButton, Navbar, Title } from "../../../components";
-import { Experience } from "../../../interfaces";
+import { GrassScene, Sprite } from "@/components/landscapes";
+import { SceneSprite, TREE_SPRITE } from "@/interfaces/landscapes";
+import { Button, DisplayButton, Navbar, Title } from "@/components";
+import { Experience } from "@/interfaces";
 import moment from "moment";
-import { data } from "../../../data/experience.data";
+import { data } from "@/data/experience.data";
 
 export const ExperienceDesktop: React.FC = () => {
 

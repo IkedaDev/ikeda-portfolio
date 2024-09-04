@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Title, DisplayButton, Button, Navbar } from "../../../components";
-import { GrassScene, Sprite } from "../../../components/landscapes";
-import { FARMING, SceneSprite } from "../../../interfaces/landscapes";
+import { Title, DisplayButton, Button, Navbar } from "@/components";
+import { GrassScene, Sprite } from "@/components/landscapes";
+import { FARMING, SceneSprite } from "@/interfaces/landscapes";
 
 import { useNavigate } from "react-router-dom";
-import { Knowledge } from "../../../interfaces";
-import { data } from "../../../data/knowledge.data";
+import { Knowledge } from "@/interfaces";
+import { data } from "@/data/knowledge.data";
 
 export const KnowledgeDesktop: React.FC = () => {
 

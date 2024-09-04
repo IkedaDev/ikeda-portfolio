@@ -1,5 +1,5 @@
 import React from "react";
-import { StepByStepProps } from "../../interfaces/components";
+import { StepByStepProps } from "@/interfaces/components";
 import "./StepByStep.css"
 
 

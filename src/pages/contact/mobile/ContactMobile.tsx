@@ -1,5 +1,5 @@
 import React from "react";
-import { NavbarMobile } from "../../../components";
+import { NavbarMobile } from "@/components";
 
 export const ContactMobile: React.FC = () => {
     return (<>

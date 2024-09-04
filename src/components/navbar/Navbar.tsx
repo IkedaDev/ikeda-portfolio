@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom"
 import './Navbar.css'
-import ArrowIcon from '../../assets/images/icons/arrow-01.svg'
+import ArrowIcon from '@/assets/images/icons/arrow-01.svg'
 
 interface Props{
     orientation?: 'right' | 'left'

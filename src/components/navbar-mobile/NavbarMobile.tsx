@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ArrowIcon from '../../assets/images/icons/arrow-01.svg'
+import ArrowIcon from '@/assets/images/icons/arrow-01.svg'
 import { NavLink } from "react-router-dom";
 
 interface Props{

@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "../../assets/images/icons/arrow-02.svg";
+import Icon from "@/assets/images/icons/arrow-02.svg";
 
 interface Props{
     label: string,

@@ -1,11 +1,11 @@
-import { FARMING, SPRITE_TYPE, SpriteProps, TREE_SPRITE } from "../../../interfaces/landscapes"
+import { FARMING, SPRITE_TYPE, SpriteProps, TREE_SPRITE } from "@/interfaces/landscapes"
 
-import THREE_CROWNED from "../../../assets/images/sprites/tree-01.png"
-import THREE_CURVED from "../../../assets/images/sprites/tree-02.png"
-import THREE_TWO_PINES from "../../../assets/images/sprites/tree-03.png"
-import BARN_01 from "../../../assets/images/sprites/barn-01.png"
-import GIRL_SCARECROW from "../../../assets/images/sprites/scarecrow-01.png"
-import BOY_SCARECROW from "../../../assets/images/sprites/scarecrow-02.png"
+import THREE_CROWNED from "@/assets/images/sprites/tree-01.png"
+import THREE_CURVED from "@/assets/images/sprites/tree-02.png"
+import THREE_TWO_PINES from "@/assets/images/sprites/tree-03.png"
+import BARN_01 from "@/assets/images/sprites/barn-01.png"
+import GIRL_SCARECROW from "@/assets/images/sprites/scarecrow-01.png"
+import BOY_SCARECROW from "@/assets/images/sprites/scarecrow-02.png"
 
 const imageSprite: {[key in SPRITE_TYPE] ?: string} = {
     [TREE_SPRITE.THREE_CROWNED] : THREE_CROWNED,

@@ -1,6 +1,6 @@
 import React from "react";
-import { GrassScene } from "../../../components/landscapes";
-import { Button, NavbarMobile } from "../../../components";
+import { GrassScene } from "@/components/landscapes";
+import { Button, NavbarMobile } from "@/components";
 import { useNavigate } from "react-router-dom";
 
 export const WelcomeMobile: React.FC = () => {

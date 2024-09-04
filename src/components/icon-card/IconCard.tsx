@@ -1,11 +1,11 @@
 import React from "react";
-import { ICON_CARD_IMAGE, IconCardProps } from "../../interfaces/components";
+import { ICON_CARD_IMAGE, IconCardProps } from "@/interfaces/components";
 
-import WHATSAPP from "../../assets/images/icons/whatsapp.svg"
-import GMAIL from "../../assets/images/icons/gmail.svg"
-import INSTAGRAM from "../../assets/images/icons/instagram.svg"
-import DISCORD from "../../assets/images/icons/discord.svg"
-import TIKTOK from "../../assets/images/icons/tiktok.svg"
+import WHATSAPP from "@/assets/images/icons/whatsapp.svg"
+import GMAIL from "@/assets/images/icons/gmail.svg"
+import INSTAGRAM from "@/assets/images/icons/instagram.svg"
+import DISCORD from "@/assets/images/icons/discord.svg"
+import TIKTOK from "@/assets/images/icons/tiktok.svg"
 
 const icons: {[key in ICON_CARD_IMAGE] ?: string} = {
     [ICON_CARD_IMAGE.WHATSAPP] : WHATSAPP,

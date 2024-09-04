@@ -1,4 +1,4 @@
-import { SceneSprite } from "../../../../interfaces/landscapes"
+import { SceneSprite } from "@/interfaces/landscapes"
 
 
 interface Props{
