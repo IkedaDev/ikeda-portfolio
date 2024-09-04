@@ -38,8 +38,8 @@ jobs:
       env:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
-        docker buildx build --platform linux/amd64,linux/arm64/v8 -t ikedaharket/ikeda-portfolio:$NEW_VERSION --push .
-        docker buildx build --platform linux/amd64,linux/arm64/v8 -t ikedaharket/ikeda-portfolio:latest --push .
+        docker buildx build --build-arg VITE_TABLET_SIZE=${{ vars.VITE_TABLET_SIZE }} --build-arg VITE_DESKTOP_SIZE=${{ vars.VITE_DESKTOP_SIZE }} --platform linux/amd64,linux/arm64/v8 -t ikedaharket/ikeda-portfolio:$NEW_VERSION --push .
+        docker buildx build --build-arg VITE_TABLET_SIZE=${{ vars.VITE_TABLET_SIZE }} --build-arg VITE_DESKTOP_SIZE=${{ vars.VITE_DESKTOP_SIZE }} --platform linux/amd64,linux/arm64/v8 -t ikedaharket/ikeda-portfolio:latest --push .
     
   deploy:
     needs: build

@@ -17,6 +17,13 @@ COPY . .
 RUN npm run build
 
 FROM nginx:1.27-bookworm-perl as prod
+
+ARG VITE_TABLET_SIZE
+ENV VITE_TABLET_SIZE=${VITE_TABLET_SIZE}
+
+ARG VITE_DESKTOP_SIZE
+ENV VITE_DESKTOP_SIZE=${VITE_DESKTOP_SIZE}
+
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/dist /usr/share/nginx/html
 EXPOSE 80
