@@ -39,40 +39,45 @@ export const NavbarMobile: React.FC<Props> = ({}: Props) => {
                         <NavLink
                             to="/"
                             className={({ isActive }) =>
-                            isActive ? 'text-primary bg-white px-5 rounded-md' : ''
-                        }
+                                isActive ? 'text-primary bg-white px-5 rounded-md' : ''
+                            }
+                            onClick={() => setShowMenu(!showMenu)}
                         >Home</NavLink>
                     </li>
                     <li className="whitespace-nowrap">
                         <NavLink 
                             to="/me"
                             className={({ isActive }) =>
-                            isActive ? 'text-primary bg-white px-5 rounded-md' : ''
-                        }
+                                isActive ? 'text-primary bg-white px-5 rounded-md' : ''
+                            }
+                            onClick={() => setShowMenu(!showMenu)}
                         >Sobre mi</NavLink>
                     </li>
                     <li className="whitespace-nowrap">
                         <NavLink 
                             to="/knowledge"
                             className={({ isActive }) =>
-                            isActive ? 'text-primary bg-white px-5 rounded-md' : ''
-                        }
+                                isActive ? 'text-primary bg-white px-5 rounded-md' : ''
+                            }
+                            onClick={() => setShowMenu(!showMenu)}
                         >Conocimientos</NavLink>
                     </li>
                     <li className="whitespace-nowrap">
                         <NavLink 
                             to="/experience"
                             className={({ isActive }) =>
-                            isActive ? 'text-primary bg-white px-5 rounded-md' : ''
-                        }
+                                isActive ? 'text-primary bg-white px-5 rounded-md' : ''
+                            }
+                            onClick={() => setShowMenu(!showMenu)}
                         >Experiencia</NavLink>
                     </li>
                     <li className="whitespace-nowrap">
                         <NavLink 
                             to="/contact"
                             className={({ isActive }) =>
-                            isActive ? 'text-primary bg-white px-5 rounded-md' : ''
-                        }
+                                isActive ? 'text-primary bg-white px-5 rounded-md' : ''
+                            }
+                            onClick={() => setShowMenu(!showMenu)}
                         >Contacto</NavLink>
                     </li>
                 </ul>

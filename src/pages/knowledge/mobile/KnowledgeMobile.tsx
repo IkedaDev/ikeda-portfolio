@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, DisplayButton, NavbarMobile, Title } from "@/components";
+import { Button, DisplayButton, Title } from "@/components";
 import { GrassScene, Sprite } from "@/components/landscapes";
 import { Knowledge } from "@/interfaces";
 import { data } from "@/data/knowledge.data";
@@ -23,9 +23,6 @@ export const KnowledgeMobile: React.FC = () => {
     }    
 
     return (<>
-        <div className="absolute top-0 right-0">
-            <NavbarMobile />
-        </div>
         <main className="h-[90vh] flex flex-col justify-center mx-8 sm:mx-16 gap-20">
             <div className="font-bold">
                 <Title header="h2">Conocimientos</Title>

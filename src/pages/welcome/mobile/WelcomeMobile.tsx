@@ -1,6 +1,6 @@
 import React from "react";
 import { GrassScene } from "@/components/landscapes";
-import { Button, NavbarMobile } from "@/components";
+import { Button } from "@/components";
 import { useNavigate } from "react-router-dom";
 
 export const WelcomeMobile: React.FC = () => {
@@ -10,9 +10,6 @@ export const WelcomeMobile: React.FC = () => {
 
     return (<>
         <main className="h-[90vh] flex flex-col justify-center mx-8 sm:mx-16">
-            <div className="absolute top-0 right-0">
-                <NavbarMobile />
-            </div>
             <div className="text-6xl font-bold">
                 <p className="">Hola!</p>
                 <p>Soy <span className="ike-text-stroke text-ike-yellow">Sebastian</span></p>

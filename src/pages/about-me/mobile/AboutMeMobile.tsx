@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { GrassScene, Sprite } from "@/components/landscapes";
-import { Button, NavbarMobile, StepByStep, Title } from "@/components";
+import { Button, StepByStep, Title } from "@/components";
 import { data } from "@/data/aboutme.interface";
 import { useNavigate } from "react-router-dom";
 import { StepProps } from "@/interfaces/components";
@@ -48,9 +48,6 @@ export const AboutMeMobile: React.FC = () => {
 
 
     return (<>
-        <div className="absolute top-0 right-0">
-            <NavbarMobile />
-        </div>
         <main className="h-[90vh] flex flex-col justify-center mx-8 sm:mx-16 gap-16 relative z-10">
             {
                 steps.length > 1 && (

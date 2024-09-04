@@ -4,7 +4,7 @@ import { SceneSprite, TREE_SPRITE } from "@/interfaces/landscapes";
 import { GrassScene, Sprite } from "@/components/landscapes";
 import { Experience } from "@/interfaces";
 import { data } from "@/data/experience.data";
-import { Button, DisplayButton, NavbarMobile, Title } from "@/components";
+import { Button, DisplayButton, Title } from "@/components";
 
 export const ExperienceMobile: React.FC = () => {
 
@@ -27,9 +27,6 @@ export const ExperienceMobile: React.FC = () => {
     }
     
     return (<>
-        <div className="absolute top-0 right-0">
-            <NavbarMobile />
-        </div>
         <main className="h-[90vh] flex flex-col justify-center mx-8 sm:mx-16 gap-20">
             <div className="font-bold">
                 <Title header="h2">Experiencia</Title>
