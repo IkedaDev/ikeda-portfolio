@@ -16,7 +16,7 @@ export const ExperienceMobile: React.FC = () => {
     ]
 
     const [experiences, _] = useState<Experience[]>(data)
-    const [ experienceSelected, setExperienceSelected ] = useState<Experience | null>(null)
+    const [ __, setExperienceSelected ] = useState<Experience | null>(null)
 
     useEffect(()=>{
         setExperienceSelected(experiences[0])

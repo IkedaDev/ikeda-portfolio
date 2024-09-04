@@ -28,15 +28,12 @@ export const NavbarMobile: React.FC<Props> = ({}: Props) => {
             />
         </div>
         <nav className={`
-                fixed w-[100vw] h-[100vh] bg-primary right-0 top-0 px-6 py-6 z-50 transition-[right] duration-500
+                fixed w-[100vw] h-[100vh] bg-primary top-0 px-6 py-6 z-50 transition-[right] duration-500
                 ${showMenu ? 'right-0' : '-right-full' }
             `}>
-            {/* <div className="flex justify-end">
-                <img src={ArrowIcon} alt="Icono navbar" className="scale-75 rotate-180 cursor-pointer" onClick={() => setShowMenu(false)}/>
-            </div> */}
             <ul className={`
                 flex w-full h-full gap-y-8 font-bold text-4xl text-white flex-col mt-[20vw] relative
-                ${showMenu ? 'top-0' : '-top-full' }
+                
                 `}>
                     <li className="whitespace-nowrap">
                         <NavLink

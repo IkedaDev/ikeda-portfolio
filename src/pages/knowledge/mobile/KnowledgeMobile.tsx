@@ -12,7 +12,7 @@ export const KnowledgeMobile: React.FC = () => {
     const handlerClickExperience = () => navigate('/experience')
 
     const [knowledges, _] = useState<Knowledge[]>(data)
-    const [knowledgeSelected, setKnowledgeSelected] = useState<Knowledge | null>(null)
+    const [__, setKnowledgeSelected] = useState<Knowledge | null>(null)
 
     const sprites: SceneSprite[] = [
         { sprite: <Sprite position={60} component={FARMING.BOY_SCARECROW} size={{height:{value:150,unit:'px'}, width:{ value:100, unit:'px'}}} /> }
