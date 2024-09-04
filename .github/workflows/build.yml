@@ -37,8 +37,8 @@ jobs:
     - name: Build Docker Image
       env:
         NEW_VERSION: ${{ steps.version.outputs.version }}
-        VITE_TABLET_SIZE: ${{ secrets.VITE_TABLET_SIZE }} # o ${ env.VITE_TABLET_SIZE } si están definidas en el flujo de trabajo
-        VITE_DESKTOP_SIZE: ${{ secrets.VITE_DESKTOP_SIZE }}
+        VITE_TABLET_SIZE: ${{ vars.VITE_TABLET_SIZE }} # o ${ env.VITE_TABLET_SIZE } si están definidas en el flujo de trabajo
+        VITE_DESKTOP_SIZE: ${{ vars.VITE_DESKTOP_SIZE }}
       run: |
         echo "VITE_TABLET_SIZE: $VITE_TABLET_SIZE"
         echo "VITE_DESKTOP_SIZE: $VITE_DESKTOP_SIZE"
