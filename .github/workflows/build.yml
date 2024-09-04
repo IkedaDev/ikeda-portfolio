@@ -38,8 +38,8 @@ jobs:
       env:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
-        docker buildx build --platform linux/amd64,linux/arm64/v8 -t ikedaharket/anami-appointments:$NEW_VERSION --push .
-        docker buildx build --platform linux/amd64,linux/arm64/v8 -t ikedaharket/anami-appointments:latest --push .
+        docker buildx build --platform linux/amd64,linux/arm64/v8 -t ikedaharket/ikeda-portfolio:$NEW_VERSION --push .
+        docker buildx build --platform linux/amd64,linux/arm64/v8 -t ikedaharket/ikeda-portfolio:latest --push .
     
   deploy:
     needs: build
@@ -57,15 +57,15 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'ENDSSH'
 
-          if [ $(docker ps -q -f name=anami-appointments) ]; then
-            docker stop anami-appointments || true
-            docker rm anami-appointments || true
+          if [ $(docker ps -q -f name=ikeda-portfolio) ]; then
+            docker stop ikeda-portfolio || true
+            docker rm ikeda-portfolio || true
           fi
           
-          if [ $(docker images -q ikedaharket/anami-appointments:latest) ]; then
-            docker rmi ikedaharket/anami-appointments:latest || true
+          if [ $(docker images -q ikedaharket/ikeda-portfolio:latest) ]; then
+            docker rmi ikedaharket/ikeda-portfolio:latest || true
           fi
           
-          docker run -d --restart=always --name anami-appointments -p 30001:80 ikedaharket/anami-appointments:latest
+          docker run -d --restart=always --name ikeda-portfolio -p 30101:80 ikedaharket/ikeda-portfolio:latest
           ENDSSH
 
