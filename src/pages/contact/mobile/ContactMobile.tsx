@@ -1,10 +1,15 @@
-import { Button, DisplayButton, IconCard, Title } from "@/components";
-import { GrassScene } from "@/components/landscapes";
+import { Button, IconCard, Title } from "@/components";
+import { GrassScene, Sprite } from "@/components/landscapes";
 import { ICON_CARD_IMAGE } from "@/interfaces/components";
+import { FARMING, SceneSprite } from "@/interfaces/landscapes";
 import React from "react";
 
 export const ContactMobile: React.FC = () => {
     
+    const sprites: SceneSprite[] = [
+        { sprite: <Sprite position={45} component={FARMING.GIRL_SCARECROW} size={{height:{value:150,unit:'px'}, width:{ value:100, unit:'px'}}} /> },
+    ]
+
     return (<>
         <main className="h-[90vh] flex flex-col justify-center gap-16 mx-8 sm:mx-16">
             <div className="text-6xl font-bold">
@@ -35,7 +40,7 @@ export const ContactMobile: React.FC = () => {
             </div>
         </main>
         <footer className="w-full absolute bottom-0 left-0">
-            <GrassScene />
+            <GrassScene sprites={sprites}/>
         </footer>
     </>)
 }
