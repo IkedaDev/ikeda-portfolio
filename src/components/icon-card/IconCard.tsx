@@ -15,15 +15,23 @@ const icons: {[key in ICON_CARD_IMAGE] ?: string} = {
     [ICON_CARD_IMAGE.TIKTOK] : TIKTOK,
 }
 
-export const IconCard: React.FC<IconCardProps> = ({icon, label}: IconCardProps) => {
+export const IconCard: React.FC<IconCardProps> = ({icon, label, size = 'normal'}: IconCardProps) => {
     return (<>
         <div className="flex gap-8 items-center">
-            <div className="flex items-center justify-center bg-primary min-w-[80px] min-h-[80px] rounded-md">
-                <img src={icons[icon]} alt="Icono" />
+            <div className={`
+                    flex items-center justify-center bg-primary  rounded-md
+                    ${size === 'small' ? 'min-w-[50px] min-h-[50px]' : 'min-w-[80px] min-h-[80px]' }
+                `}>
+                <img src={icons[icon]} alt="Icono" className={`
+                        ${size === 'small' && 'scale-75' }
+                    `} />
             </div>
             {
                 label && <div>
-                    <span className="text-2.4rem">{label}</span>
+                    <span className={`
+                            text-2.4rem
+                            ${size === 'small' && 'text-[1.6rem]'}
+                        `}>{label}</span>
                 </div>
             }
         </div>

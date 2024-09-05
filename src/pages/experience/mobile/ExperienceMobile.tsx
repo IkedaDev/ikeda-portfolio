@@ -47,7 +47,7 @@ export const ExperienceMobile: React.FC = () => {
             </div>
             <div className="w-1/2">
                 <Button handlerClick={handlerClickContact}>
-                    Experiencia
+                    Contacto
                 </Button>
             </div>
                             
