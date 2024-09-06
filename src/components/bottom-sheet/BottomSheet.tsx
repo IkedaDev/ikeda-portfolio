@@ -36,7 +36,7 @@ export const BottomSheet: React.FC<Props> = ({children, title, open, setOpen}:Pr
         <div 
             ref={sheetRef}
             className={` BottomSheet
-                fixed bg-primary w-[100vw] p-8 rounded-t-[2.5rem] max-h-[85vh] transition-all duration-300 z-40
+                fixed bg-primary w-[100vw] p-8 rounded-t-[2.5rem] max-h-[calc(100vh-80px)] transition-all duration-300 z-40
                 ${open ? 'bottom-0' : '-bottom-full'}
             `}
         >
