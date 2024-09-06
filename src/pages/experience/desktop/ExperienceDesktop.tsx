@@ -55,7 +55,11 @@ export const ExperienceDesktop: React.FC = () => {
                                 { experienceSelected.period.show && (
                                     <p className="flex gap-16 mb-8">
                                         <span className="bg-primary text-white px-4 rounded-md ">{moment(experienceSelected.period.start).format('MM / YYYY')}</span>
-                                        <span className="bg-primary text-white px-4 rounded-md ">{moment(experienceSelected.period.end).format('MM / YYYY')}</span>
+                                        <span className="bg-primary text-white px-4 rounded-md ">{
+                                            experienceSelected.period.end 
+                                            ? moment(experienceSelected.period.end).format('MM / YYYY')
+                                            : 'Actualmente'
+                                        }</span>
                                     </p> 
                                 )} 
                                 

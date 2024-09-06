@@ -34,12 +34,24 @@ export const data: Experience[] = [
     },{
         id:'3',
         button: { label: 'Confuturo' },
-        period:{ start: new Date("01-01-2022"), end: new Date("01-02-2023"), show: true },
-        information: '3'
+        period:{ start: new Date("11-06-2023"), show: true },
+        information: `
+            <p>En <strong>Confuturo</strong>, me encargo de corregir problemas, agregar funcionalidades y darle mantención a todos los proyectos del área web de la empresa. Estos incluyen aplicaciones web, como el portal de clientes, backend con arquitectura de microservicios, y bases de datos.</p>
+            <br />
+            <p>En mi día a día, manejo tecnologías como <strong>Angular</strong>, <strong>Redux</strong>, <strong>TypeScript</strong>, <strong>.NET</strong>, <strong>Oracle</strong>, y <strong>PostgreSQL</strong>, y, en menor medida, trabajo con aplicaciones desarrolladas en <strong>React</strong>, <strong>Node.js</strong></p>
+        `
     },{
         id:'4',
         button: { label: 'Otros' },
         period:{ start: new Date("01-01-2022"), end: new Date("01-02-2023"), show: false, },
-        information: '4'
+        information: `
+            <h3 class='font-bold text-4xl mb-6'>Opticad-Lux</h3>
+            <p class='mb-6' >Opticad-Lux es una óptica que me contactó para desarrollar su sitio web. El dueño quería una web de presentación con unos mantenedores simples para editar imágenes de un banner principal y las URLs e íconos de sus redes sociales. El sistema fue desarrollado con <strong>Angular</strong>, un backend en <strong>PHP</strong>, y una base de datos <strong>PostgreSQL</strong>.</p>
+            <p><a href="https://opticad-lux.cl/" rel="noopener noreferrer" target="_blank">https://opticad-lux.cl/</a></p>
+            <br />
+            <h3 class='font-bold text-4xl mb-6'>Anami</h3>
+            <p class='mb-6'>Anami es un emprendimiento de masoterapia para el cual desarrollé una aplicación PWA con <strong>Angular</strong>, diseñada para ser instalada como aplicación en dispositivos móviles. El propósito de esta aplicación es agendar masajes del día y calcular las ganancias entre el hotel y la masoterapeuta.</p>
+            <p><a href="https://anami.ikedadev.com/" rel="noopener noreferrer" target="_blank">https://anami.ikedadev.com/</a></p>
+        `
     },
 ]
