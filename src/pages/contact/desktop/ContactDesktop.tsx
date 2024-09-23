@@ -34,7 +34,7 @@ export const ContactDesktop: React.FC = () => {
                 <div className="h-full w-1/2  ">
                     <Navbar />
                     <div className="flex flex-col justify-center h-[70vh] items-center text-3xl leading-[3rem] md:px-24 lg:px-32 xl:px-40 relative z-10">
-                        <p className="font-bold text-[6rem] text-red-900">Elizabeth</p>
+                        <p className="font-bold text-[6rem] text-red-900">Anette</p>
                     </div>
                     <div className="fixed bottom-0 right-0 w-1/2">
                         <GrassScene  sprites={sprites}/>
