@@ -1,0 +1,10 @@
+services:
+  ikeda-portfolio:
+    build: 
+      context: .
+      target: prod
+      dockerfile: Dockerfile
+    image: ikedadev/ikeda-portfolio
+    container_name: front-ikeda-portfolio
+    ports:
+      - 80:80
