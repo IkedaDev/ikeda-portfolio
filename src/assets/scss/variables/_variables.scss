@@ -1,0 +1,26 @@
+
+$font-size: (
+    "default":10px,
+);
+
+$element-sizes:(
+    "header":(
+        "height": 7rem,
+    ),
+);
+
+$border-radius:(
+    "400": 4px,
+    "default": 10px,
+);
+
+$box-shadow:(
+    "size-4": 0 4px 4px 0 rgba(0, 0, 0, 0.25),
+    "default": 0 0 0 0 rgb(255, 255, 255),
+);
+
+$transition:(
+    "fast": .1s ease-in-out,
+    "default": .3s ease-in-out,
+);
+

@@ -1,0 +1,36 @@
+@use "sass:map";
+
+@use "../variables/variables" as var;
+@use "../variables/colors" as color;
+
+header.header{
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);    
+    display: flex;
+    height: map.get(map.get(var.$element-sizes,"header"), "height");
+    justify-content: space-between;
+    min-width: 100%;
+    padding: 0 50px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    & .header__logo{
+        font-size: 4rem;
+    }
+    & nav.header__nav{
+        font-size: 2rem;
+        display: flex;
+        gap: 10px;
+        & span{
+            margin: 0 10px;
+            padding: 7px 13px;
+            border-radius: map.get($map: var.$border-radius, $key: "400");
+            transition: map.get($map: var.$transition, $key: "fast") all ; 
+            &:hover {
+                cursor: pointer;
+                background: map.get(map.get(color.$business-color, "primary"), "default");
+            }
+        }
+    }
+}

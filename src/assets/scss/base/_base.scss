@@ -1,0 +1,22 @@
+@use "sass:map";
+@use "../fonts/gabarito" ;
+@use "../fonts/noto-sans" ;
+@use "../variables/variables" as var;
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+html{
+    font-size: map.get($map: var.$font-size, $key: "default");
+    font-family: "Gabarito"; 
+    font-weight: 400;
+}
+
+body{
+    min-height: 100%;
+    min-width: 100%;
+}
