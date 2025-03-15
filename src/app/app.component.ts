@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
 
@@ -9,11 +9,11 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit{
-  title = 'ikeda-portfolio';
-  titleService = inject(Title)
+  public title = 'ikeda-portfolio';
+  private readonly titleService = inject(Title)
+  
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
     this.titleService.setTitle('Portafolio IkedaDev 🍙')
   }
+  
 }

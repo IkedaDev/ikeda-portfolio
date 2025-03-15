@@ -27,6 +27,7 @@ button.button{
     border-radius: map.get(var.$border-radius,"400");
     padding: 8px 12px;
     font-size: 1.4rem;
+    outline: none;
     transition: map.get($map: var.$transition, $key: "default") all;
     &.btn-primary{
         background-color: map.get(map.get(color.$business-color,"primary"),"default");

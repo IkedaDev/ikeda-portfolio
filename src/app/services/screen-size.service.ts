@@ -18,11 +18,12 @@ export class ScreenSizeService{
   public readonly isDesktop = computed(() => this.screenSize() === 'desktop');
 
   public readonly screenSize = computed<ScreenSize>(()=>{
-    const width = this.width()
-    if( !width ) return null
-    if( width < 768) return 'mobile'
-    if( width >= 768 && width < 1024 ) return 'tablet'
-    return 'desktop'
+    return null;
+    // const width = this.width()
+    // if( !width ) return null
+    // if( width < 768) return 'mobile'
+    // if( width >= 768 && width < 1024 ) return 'tablet'
+    // return 'desktop'
   })
 
   constructor(

@@ -1,13 +1,11 @@
-<header class="header" [class.is-header-responsive]="!screenSize.isDesktop()">
+
+<header class="header" >
     <div class="header__logo" >IkedaDev</div>
-    
-    @if ( screenSize.isDesktop() ) {
         <nav class="header__nav">
             @for (item of navItems; track $index) {
                 <span>{{item.label}}</span>
             }
         </nav>
-    }@else {
         <button 
             class="header__menu-hamburger hamburger hamburger--collapse" 
             [class.is-active]="isOpenMenu()" 
@@ -23,5 +21,4 @@
                 <span>{{item.label}}</span>
             }
         </nav>
-    }
 </header>
