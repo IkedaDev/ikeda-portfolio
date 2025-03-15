@@ -1,20 +1,48 @@
 @use "sass:map";
 
 @use "../variables/variables" as var;
+@use "../variables/colors" as color;
 
 section.welcome{
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100vh;
     & div.welcome__background{
-        width: 100%;
-        height: 100%;
-        top: 0;
-        z-index: -1;
-        position: absolute;
         background-size: cover;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
     }
+    & .welcome__section{
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        margin: auto;
+        max-width: calc(100vw - var(--margin-page-portfolio) );
+        width: 100%;
+
+        & .welcome__info{
+            & .welcome__info-title,
+            & .welcome__info-subtitle{
+                font-size: 4rem;
+            }
+            & .welcome__info-subtitle{
+                color: map.get(map.get(color.$business-color,"primary"),"default");
+            }
+            & .welcome__info-text{
+                margin: 10px 0 20px 0;
+                font-size: 1.6rem;
+            }
+            & .welcome__info-button{
+                font-size: 2.4rem;
+                font-weight: 600;
+                color: rgb(37, 37, 37);
+            }
+        }
+    }
+    
+
 }

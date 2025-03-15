@@ -21,7 +21,7 @@ $color:(
         "500": #ffda33, 
         "default": #ffd500, 
         "600": #fdc500,
-        "800": #fecd00
+        "800": #ebbc00
     ),
     "purple":(
         "default": #7F00B2, 
@@ -45,8 +45,9 @@ $color:(
 $business-color:(
     "primary":(
         "300": map.get($color, "yellow", "300" ),
+        "500": map.get($color, "yellow", "500" ),
         "default": map.get($color, "yellow", "default" ),
-        "700": map.get($color, "yellow", "700" ),
+        "600": map.get($color, "yellow", "600" ),
         "800": map.get($color, "yellow", "800" ),
     ),
 );

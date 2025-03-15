@@ -15,6 +15,12 @@ header.header{
     position: fixed;
     top: 0;
     z-index: 2;
+    &.is-header-responsive{
+        --header-height: 6rem;
+        & .header__logo{
+            font-size: 3.4rem;
+        }
+    }
     & .header__logo{
         font-size: 4rem;
     }
@@ -32,5 +38,41 @@ header.header{
                 background: map.get(map.get(color.$business-color, "primary"), "default");
             }
         }
+    }
+    & nav.header__nav-responsive{
+        background: white;
+        position: absolute;
+        right: -200px;
+        top: calc(100% + 10px) ;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        max-width: max-content;
+        gap: 5px;
+        min-width: 160px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);    
+        padding: 10px;
+        border-radius: map.get($map: var.$border-radius, $key: "400");
+        transition: map.get($map: var.$transition, $key: "default") all;
+        &.is-active{
+            right: 10px;
+        }
+        & span {
+            font-size: 1.4rem;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            height: 3rem;
+            width: 100%;
+            
+            padding: 0 0 0 10px;
+            border-radius: map.get($map: var.$border-radius, $key: "400");
+            &:hover {
+                cursor: pointer;
+                background: map.get(map.get(color.$business-color, "primary"), "default");
+            }
+        }
+
     }
 }

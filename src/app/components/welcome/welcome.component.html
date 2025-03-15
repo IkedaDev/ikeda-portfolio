@@ -1,5 +1,22 @@
 
 <section class="welcome">
     <div class="welcome__background" style="background-image: url(../../../assets/images/cloud-backgroud.png);"></div>
-    hola
+    <div 
+        class="welcome__section">
+        <div  class="welcome__info" >
+            <h2 class="welcome__info-title">Hola, soy Sebastian Torrealba</h2>
+            <h3 class="welcome__info-subtitle">Full Stack Developer</h3>
+            <p class="welcome__info-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, vero nam, reprehenderit, magni inventore dignissimos sint numquam repellat excepturi fugiat sit facilis.
+            </p>
+            <button class="button btn-primary welcome__info-button">
+                CV 🍙
+            </button>
+        </div>
+        @if(screenSizeService.isDesktop()){
+            <picture>
+                <img ngSrc="../../../assets/images/people-in-desktop.svg" alt="Desarrollo Web" width="500" height="375" priority>
+            </picture>
+        }
+    </div>
 </section>
