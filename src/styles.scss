@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-@forward "hamburgers/_sass/hamburgers/hamburgers";
+@forward "animate.css/animate.min.css";
+
+@forward "hamburgers/_sass/hamburgers/hamburgers.scss";
 
 @forward "./assets/scss/main";
 
