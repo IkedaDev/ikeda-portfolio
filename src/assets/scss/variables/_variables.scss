@@ -2,6 +2,7 @@
 
 :root{
     --header-height: 7rem;
+    --margin-page-portfolio: 1000px;
 }
 
 
@@ -20,12 +21,9 @@ $screen-size:(
     }
 }
 
-
 $font-size: (
     "default":10px,
 );
-
-
 
 $element-sizes:(
     "header":(

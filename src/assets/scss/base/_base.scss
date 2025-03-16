@@ -21,7 +21,21 @@ body{
     min-height: 100%;
     min-width: 100%;
 }
-
+.title{
+    font-size: 3.4rem;
+    margin-bottom: 20px;
+}
+.subtitle{
+    font-size: 2.6rem;
+    color: map.get(map.get(color.$business-color,"primary"),"default");
+    margin-bottom: 20px;
+}
+.text{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: rgb(49, 49, 49);
+    margin-bottom: 40px;
+}
 button.button{
     border: none;
     border-radius: map.get(var.$border-radius,"400");
