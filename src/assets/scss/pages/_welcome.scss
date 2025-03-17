@@ -27,3 +27,19 @@ section.services{
         justify-content: center;
     }
 }
+section.experience{
+    max-width: map.get(var.$margin-page, "portfolio");
+    margin: 60px auto;
+    text-align: center;
+    .title{
+        text-align: center;
+    }
+    .experience__container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+    }
+    
+}

@@ -1,0 +1,40 @@
+@use "sass:map";
+@use "../variables/variables" as var;
+@use "../variables/colors" as color;
+
+article.experience__card{
+    
+    background: #374151;
+    padding: 20px;
+    display: flex;
+    border-radius: map.get(var.$border-radius, "default");
+    gap: 20px;
+    flex-wrap: wrap;
+    picture {
+        &.bg{
+            background: map.get(map.get(color.$bg-color,"primary"),"default");
+            
+            padding: 20px;
+        }
+        border-radius: map.get(var.$border-radius, "default");;
+        flex-basis: 150px;
+        min-height: 150px;
+        display: flex;
+        align-items: center;
+        img{
+            width: 100%;
+            object-position: center;
+        }
+    } 
+    .experience__card-info{
+        flex-grow: 1;
+        width: 400px;
+        color: map.get(color.$text-color,"white");
+        .experience__card-title,.experience__card-text{
+            color: map.get(color.$text-color,"white");
+        }
+        .experience__card-text{
+            line-height: 2.4rem;
+        }
+    }
+}

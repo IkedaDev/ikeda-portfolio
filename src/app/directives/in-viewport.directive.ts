@@ -7,7 +7,7 @@ import { AfterViewInit, Directive, ElementRef, Inject, inject, input, PLATFORM_I
 export class InViewportDirective implements AfterViewInit  { 
 
   public readonly classToAdd = input<string>('visible')
-
+  public readonly work = input<'every' | 'once'>('every')
   private readonly el = inject(ElementRef)
   private readonly renderer = inject(Renderer2)
 
@@ -15,15 +15,18 @@ export class InViewportDirective implements AfterViewInit  {
 
   ngAfterViewInit(): void {
     if(isPlatformServer(this.platformId)) return
-    const observer = new IntersectionObserver( entries => {
+    const observer = new IntersectionObserver( (entries, obs) => {
       entries.forEach( entry => {
 
         if( !entry.isIntersecting ) {
           this.renderer.removeClass(this.el.nativeElement, this.classToAdd() )
           return 
         }
-
+        
         this.renderer.addClass(this.el.nativeElement, this.classToAdd() )
+        if (this.work() === 'once') {
+          obs.unobserve(this.el.nativeElement);
+        }
       })
     })
     observer.observe(this.el.nativeElement)

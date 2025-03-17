@@ -1,0 +1,13 @@
+<article class="experience__card" inViewport classToAdd="animate-fade-in" [work]="'once'">
+    <picture [class.bg]="data().image.withBackground">
+        <img [src]="data().image.src" [alt]="data().title">
+    </picture>
+    <div class="experience__card-info">
+        <h4 class="subtitle experience__card-title">{{data().title}}</h4>
+        <p class="text experience__card-text">{{data().description}}</p>
+        <!-- <div class="experience__card-dates">
+            <span>{{data().from}}</span>
+            <span>{{data().to}}</span>
+        </div> -->
+    </div>
+</article>

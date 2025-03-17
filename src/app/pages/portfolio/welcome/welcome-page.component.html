@@ -18,9 +18,20 @@
     <h2 class="title">Servicios</h2>
     <div class="services__container">
         @for (serviceCard of serviceCards(); track $index) {
-            <app-service-card [data]="serviceCard"></app-service-card>
+            <app-service-card [data]="serviceCard" ></app-service-card>
         }
     </div>
+</section>
+<section class="experience">
+    <h2 class="title">Experiencia / Proyectos</h2>
+    <div class="experience__container" >
+        @for (experienceCard of displayExperienceCards(); track experienceCard.title) {
+            <app-experience-card [data]="experienceCard" ></app-experience-card>
+        }
+    </div>
+    <button class="button experience__button" (click)="displayMoreExperience()">
+        {{displayExperienceCards().length === this.experienceCards().length ? 'Ver menos': 'Ver más'}}
+    </button>
 </section>
 <br>
 <br>
