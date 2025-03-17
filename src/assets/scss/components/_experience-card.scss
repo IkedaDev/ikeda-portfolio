@@ -11,6 +11,7 @@ article.experience__card{
     gap: 20px;
     flex-wrap: wrap;
     picture {
+        margin: auto;
         &.bg{
             background: map.get(map.get(color.$bg-color,"primary"),"default");
             
@@ -30,8 +31,12 @@ article.experience__card{
         flex-grow: 1;
         width: 400px;
         color: map.get(color.$text-color,"white");
+        text-align: start;
         .experience__card-title,.experience__card-text{
             color: map.get(color.$text-color,"white");
+        }
+        .experience__card-title{
+            margin: 20px 0 10px 0;
         }
         .experience__card-text{
             line-height: 2.4rem;
