@@ -52,7 +52,7 @@ export class WelcomePageComponent implements OnInit{
     {
       title:'Opticad-Lux',
       image:{
-        src:'https://opticad-lux.cl/assets/logo.png',
+        src:'/assets/images/logo-opticad-lux.png',
       },
       description:'Creé una página web para una óptica en Rancagua utilizando HTML, CSS, TypeScript y Angular, junto con RxJS, Bootstrap, Angular Material y Sass. Además, desarrollé un backend en PHP con una base de datos MySQL, manteniendo el código bajo control con GIT.',
       from: new Date(2021,5,1),
