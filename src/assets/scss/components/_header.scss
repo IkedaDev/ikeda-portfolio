@@ -6,7 +6,7 @@
 header.header{
     align-items: center;
     background: #ffffff;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);    
+    box-shadow: map.get(var.$box-shadow,"default");    
     display: flex;
     height: map.get(map.get(var.$element-sizes,"header"), "height");
     justify-content: space-between;
@@ -47,7 +47,7 @@ header.header{
         max-width: max-content;
         gap: 5px;
         min-width: 160px;
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);    
+        box-shadow: map.get(var.$box-shadow,"default");    
         padding: 10px;
         border-radius: map.get($map: var.$border-radius, $key: "400");
         transition: map.get($map: var.$transition, $key: "default") all;

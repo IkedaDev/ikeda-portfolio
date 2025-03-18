@@ -14,15 +14,15 @@ article.experience__card{
         margin: auto;
         &.bg{
             background: map.get(map.get(color.$bg-color,"primary"),"default");
-            
             padding: 20px;
         }
-        border-radius: map.get(var.$border-radius, "default");;
+        border-radius: map.get(var.$border-radius, "default");
         flex-basis: 150px;
         min-height: 150px;
         display: flex;
         align-items: center;
         img{
+            border-radius: map.get(var.$border-radius, "default");
             width: 100%;
             object-position: center;
         }

@@ -3,6 +3,7 @@
 :root{
     --header-height: 7rem;
     --margin-page-portfolio: 1000px;
+    --box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)
 }
 
 
@@ -42,7 +43,7 @@ $border-radius:(
 
 $box-shadow:(
     "size-4": 0 4px 4px 0 rgba(0, 0, 0, 0.25),
-    "default": 0 0 0 0 rgb(255, 255, 255),
+    "default": var(--box-shadow),
 );
 
 $transition:(

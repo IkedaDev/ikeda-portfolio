@@ -40,6 +40,48 @@ section.experience{
         gap: 20px;
         justify-content: center;
         padding: 20px;
+    }   
+}
+section.contact{
+    background-color: map.get(map.get(color.$bg-color,"grey"),"default");
+    padding: 60px 20px 60px 20px;
+    .title{
+        text-align: center;
+        margin-bottom: 40px;
     }
-    
+    .contact__container{
+        max-width: map.get(var.$margin-page, "portfolio");
+        display: flex;
+        margin: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        .contact__container-info{
+            flex-grow: 1;
+            .contact__item{
+                margin-bottom: 20px;
+                h6{
+                    font-size: 2rem;
+                }
+                p{
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        picture{
+            flex-basis: 300px;
+            img{
+                box-shadow: map.get(var.$box-shadow,"default");
+                border-radius: 50%;
+                width: 100%;
+            }
+        }
+    }
+}
+section.developer-by{
+    padding: 10px 20px;
+    text-align: center;
+    p{
+        font-size: 1.4rem;
+    }
 }
