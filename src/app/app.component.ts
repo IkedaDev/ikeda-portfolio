@@ -13,7 +13,7 @@ export class AppComponent implements OnInit{
   private readonly titleService = inject(Title)
   
   ngOnInit(): void {
-    this.titleService.setTitle('Portafolio IkedaDev 🍙')
+    this.titleService.setTitle('Portafolio IkedaDev')
   }
   
 }
