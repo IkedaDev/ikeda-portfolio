@@ -1,10 +1,11 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { NavItem } from '@interfaces/app'
 import { ScreenSizeService } from '../../services';
+import { ScrollToDirective } from '@directives/scrollTo.directive';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [ ScrollToDirective ],
   templateUrl: './header.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
@@ -15,11 +16,11 @@ export class HeaderComponent {
 
 
   public navItems : NavItem[] = [
-    { path: 'home', label:'Inicio' },
-    { path: 'about', label:'Sobre mi' },
-    { path: 'services', label:'Servicios' },
-    { path: 'experience', label:'Experiencia' },
-    { path: 'contact', label:'Contacto' },
+    { path: 'home', label:'Inicio', action:'id-home-section' },
+    { path: 'about', label:'Sobre mi', action:'id-about-section' },
+    { path: 'services', label:'Servicios', action:'id-services-section' },
+    { path: 'experience', label:'Experiencia', action:'id-experience-section' },
+    { path: 'contact', label:'Contacto', action:'id-contact-section' },
   ]
 
   toggleMenu(){

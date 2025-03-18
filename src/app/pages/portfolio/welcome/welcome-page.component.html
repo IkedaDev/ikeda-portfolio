@@ -1,6 +1,6 @@
 <app-welcome />
 
-<section class="aboutme">
+<section class="aboutme" id="id-about-section">
     <h2 class="title">Sobre mi</h2>
     <h3 class="subtitle">Un poco sobre mi</h3>
     <p class="text">
@@ -20,7 +20,7 @@
         tablets y computadoras de escritorio.
     </p>
 </section>
-<section class="services">
+<section class="services" id="id-services-section">
     <h2 class="title">Servicios</h2>
     <div class="services__container">
         @for (serviceCard of serviceCards(); track $index) {
@@ -28,7 +28,7 @@
         }
     </div>
 </section>
-<section class="experience">
+<section class="experience" id="id-experience-section">
     <h2 class="title">Experiencia / Proyectos</h2>
     <div class="experience__container" >
         @for (experienceCard of displayExperienceCards(); track experienceCard.title) {
@@ -39,7 +39,7 @@
         {{displayExperienceCards().length === this.experienceCards().length ? 'Ver menos': 'Ver más'}}
     </button>
 </section>
-<section class="contact">
+<section class="contact" id="id-contact-section">
     <h2 class="title">Contacto</h2>
     <div class="contact__container">
         <div class="contact__container-info">

@@ -21,4 +21,5 @@ export interface ServiceCard {
 export interface NavItem {
     path: string
     label: string
+    action?: string
 }
