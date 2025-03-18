@@ -11,7 +11,6 @@ export class ScrollToDirective {
     const targetElement = document.getElementById(this.sectionToScroll())
     if(targetElement){
       const targetPosition = targetElement.offsetTop
-      console.log(targetPosition)
       window.scrollTo({ top: targetPosition - 100, behavior: 'smooth' })
     }
   }
