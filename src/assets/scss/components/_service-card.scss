@@ -5,17 +5,19 @@
 .service-card{
     background-color: map.get(map.get(color.$bg-color,"primary"),"default");
     border-radius: map.get(var.$border-radius, "default");
-    padding: 20px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 320px;
-    min-height: 365px;
+    min-height: 430px;
     .service-card__title{
+        text-align: center;
         padding: 10px;
         font-size: 2rem;
     }
     .text{
         margin-top: 10px;
+        margin-bottom: 10px;
     }
 }

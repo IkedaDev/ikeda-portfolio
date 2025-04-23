@@ -15,26 +15,39 @@ export class WelcomePageComponent implements OnInit{
   public displayExperienceCards = signal<ExperienceCard[]>([])
   public serviceCards = signal<ServiceCard[]>([
     {
-      title:'Aplicaciones Web',
-      description:'Creación de aplicaciones web a medida, escalables y adaptadas a tus necesidades, con una experiencia de usuario excepcional. Todo desde tu navegador, sin necesidad de instalaciones complejas. Desarrolladas con tecnologías actuales para garantizar eficiencia y seguridad.',
+      title:'Desarrollo de sitios web escalables',
+      description:'Como desarrollador web, me especializo en la creación de sitios web robustos y escalables, utilizando tecnologías modernas para garantizar un rendimiento óptimo y la capacidad de crecer con las necesidades de tu empresa. Mi enfoque se centra en la eficiencia del código, la seguridad y la mantenibilidad a largo plazo.',
       image:'https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-web-development-coding-kiranshastry-lineal-color-kiranshastry.png'
     },{
-      title:'Paginas Web',
-      description:'Diseño y desarrollo de páginas web modernas, rápidas y responsivas. Adaptadas a todos los dispositivos y alineadas con la identidad de tu marca. Utilizamos buenas prácticas de accesibilidad, SEO y rendimiento para lograr resultados óptimos.'  ,
+      title:'Optimización y mantenimiento de sitios web',
+      description:'No solo desarrollo sitios web, sino que también ofrezco servicios de optimización y mantenimiento para asegurar que tu plataforma online funcione de manera eficiente y segura a lo largo del tiempo. Me mantengo actualizado con las últimas tendencias y mejores prácticas para garantizar la estabilidad y el rendimiento de tu sitio.'  ,
       image:'https://cdn-icons-png.flaticon.com/64/10011/10011316.png'
     },{
-      title:'APIS - Microservicios',
-      description:'Desarrollo de APIs robustas y microservicios eficientes que permiten conectar sistemas y escalar tu negocio. Utilizamos tecnologías modernas para garantizar seguridad, alto rendimiento y una integración sencilla con otras plataformas.'  ,
+      title:'Integración y escalabilidad con APIs y microservicios',
+      description:'Desarrollo APIs y arquitecturas de microservicios eficientes que permiten conectar sistemas existentes y escalar tu negocio de manera flexible. Utilizo tecnologías de vanguardia para garantizar seguridad, alto rendimiento y una integración sencilla con otras plataformas, permitiéndote innovar y crecer sin limitaciones.'  ,
       image:'https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-backend-no-code-flaticons-flat-flat-icons.png'
     }
+    // {
+    //   title:'Aplicaciones Web',
+    //   description:'Creación de aplicaciones web a medida, escalables y adaptadas a tus necesidades, con una experiencia de usuario excepcional. Todo desde tu navegador, sin necesidad de instalaciones complejas. Desarrolladas con tecnologías actuales para garantizar eficiencia y seguridad.',
+    //   image:'https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-web-development-coding-kiranshastry-lineal-color-kiranshastry.png'
+    // },{
+    //   title:'Paginas Web',
+    //   description:'Diseño y desarrollo de páginas web modernas, rápidas y responsivas. Adaptadas a todos los dispositivos y alineadas con la identidad de tu marca. Utilizamos buenas prácticas de accesibilidad, SEO y rendimiento para lograr resultados óptimos.'  ,
+    //   image:'https://cdn-icons-png.flaticon.com/64/10011/10011316.png'
+    // },{
+    //   title:'APIS - Microservicios',
+    //   description:'Desarrollo de APIs robustas y microservicios eficientes que permiten conectar sistemas y escalar tu negocio. Utilizamos tecnologías modernas para garantizar seguridad, alto rendimiento y una integración sencilla con otras plataformas.'  ,
+    //   image:'https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-backend-no-code-flaticons-flat-flat-icons.png'
+    // }
   ])
 
   public experienceCards = signal<ExperienceCard[]>([
     {
       title:'Confuturo',
       image:{
-        src:'https://z-p3-scontent.fqrc2-1.fna.fbcdn.net/v/t39.30808-1/347432503_638493701647223_67128603948623409_n.png?stp=dst-png_s200x200&_nc_cat=102&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeEp-KC8t5X0cVinmIoFbpdbwRoeNwUnT6zBGh43BSdPrHtM1sERxGsK3OtC4xq9uxN6C4dyNDf9cEaG3JME4Dux&_nc_ohc=hxorICXwi9MQ7kNvgE3ccSE&_nc_oc=Adi6OIHWFjKF7YfxW0WZ36XCA0GqZQxroVNLGMejpnozjBF7DUnlA2BbBgi1Ot09_Jw&_nc_zt=24&_nc_ht=z-p3-scontent.fqrc2-1.fna&_nc_gid=LyQNisiyeNXldWP3Eyklpw&oh=00_AYGc8hy1BcGzNJwZH9A7VH-qeTEhiTzRUAtQnmsc_eah5w&oe=67DE7250',
-        withBackground: false,
+        src:'https://www.confuturo.cl/wp-content/themes/confuturo_2025/img/logotipo.svg',
+        withBackground: true,
       },
       description:'En Confuturo me dedico a dar continuidad a diversas aplicaciones, las cuales pueden estar construidas con frontends como Angular, React, MVC de .NET, entre otras, y en microservicios que en su mayoría están realizados en C#. En mi día a día me piden realizar todo tipo de tareas, desde pequeñas correcciones hasta agregar nuevas funcionalidades.',
       from: new Date(2021,5,1),
