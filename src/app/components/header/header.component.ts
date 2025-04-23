@@ -2,10 +2,11 @@ import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/cor
 import { NavItem } from '@interfaces/app'
 import { ScreenSizeService } from '../../services';
 import { ScrollToDirective } from '@directives/scrollTo.directive';
+import { ClickOutsideDirective } from '@directives/click-outside.directive';
 
 @Component({
   selector: 'app-header',
-  imports: [ ScrollToDirective ],
+  imports: [ ScrollToDirective, ClickOutsideDirective ],
   templateUrl: './header.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
@@ -25,6 +26,10 @@ export class HeaderComponent {
 
   toggleMenu(){
     this.isOpenMenu.update(prev => !prev)
+  }
+
+  clickOutsideResponsiveMenu(){
+    this.isOpenMenu.set(false)
   }
 
 }
