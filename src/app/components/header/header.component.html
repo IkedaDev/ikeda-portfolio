@@ -1,5 +1,5 @@
 
-<header class="header" (clickOutside)="clickOutsideResponsiveMenu()">
+<header class="header" (clickOutside)="closeMenu()">
     <div class="header__logo" >IkedaDev</div>
         <nav class="header__nav">
             @for (item of navItems; track $index) {
@@ -23,9 +23,9 @@
         <nav class="header__nav-responsive" [class.is-active]="isOpenMenu()">
             @for (item of navItems; track $index) {
                 @if(item.action){
-                    <span scrollTo [sectionToScroll]="item.action">{{item.label}}</span>
+                    <span scrollTo [sectionToScroll]="item.action" (click)="closeMenu()">{{item.label}}</span>
                 }@else{
-                    <span >{{item.label}}</span>
+                    <span>{{item.label}}</span>
                 }
             }
         </nav>

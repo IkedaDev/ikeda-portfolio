@@ -28,7 +28,7 @@ export class HeaderComponent {
     this.isOpenMenu.update(prev => !prev)
   }
 
-  clickOutsideResponsiveMenu(){
+  closeMenu(){
     this.isOpenMenu.set(false)
   }
 
