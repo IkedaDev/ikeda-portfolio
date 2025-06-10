@@ -13,7 +13,7 @@ export class WelcomeComponent {
   public readonly screenSizeService = inject(ScreenSizeService)
 
   openCV(){
-    open('https://drive.google.com/file/d/1LiSbiPjuwd5mJkkoXPiifVVao1wm8aOz/view?usp=sharing','__blank')
+    open('https://drive.google.com/file/d/1K0kb-xHwahGxZg-nVpuayWYV_DMNsw25/view?usp=sharing','__blank')
   }
 
 }
