@@ -46,7 +46,7 @@ export class WelcomePageComponent implements OnInit{
     {
       title:'Confuturo',
       image:{
-        src:'https://imgur.com/MQkxo98',
+        src:'https://i.imgur.com/MQkxo98.jpeg',
         withBackground: true,
       },
       description:'En Confuturo me dedico a dar continuidad a diversas aplicaciones, las cuales pueden estar construidas con frontends como Angular, React, MVC de .NET, entre otras, y en microservicios que en su mayoría están realizados en C#. En mi día a día me piden realizar todo tipo de tareas, desde pequeñas correcciones hasta agregar nuevas funcionalidades.',
