@@ -60,8 +60,14 @@ export class WelcomePageComponent implements OnInit {
         src: 'https://i.imgur.com/MQkxo98.jpeg',
         withBackground: true,
       },
-      description:
-        'En Confuturo me dedico a dar continuidad a diversas aplicaciones, las cuales pueden estar construidas con frontends como Angular, React, MVC de .NET, entre otras, y en microservicios que en su mayoría están realizados en C#. En mi día a día me piden realizar todo tipo de tareas, desde pequeñas correcciones hasta agregar nuevas funcionalidades.',
+      description: `
+      <p>Ingeniero de Software en <a href="https://www.confuturo.cl/" target="_blank"><b>Confuturo</b></a>, especializado en el desarrollo y evolución de soluciones financieras bajo el ecosistema <b>Microsoft .NET</b>.</p>
+  <ul>
+    <li>Arquitectura y desarrollo de <b>Microservicios</b> robustos utilizando <b>C#</b> y <b>.NET Core</b>, asegurando la escalabilidad del negocio.</li>
+    <li>Mantenimiento evolutivo y correctivo de aplicaciones web híbridas, integrando backends .NET con interfaces en <b>Angular</b>, <b>React</b> y <b>ASP.NET MVC</b>.</li>
+    <li>Implementación de nuevas funcionalidades críticas y optimización de rendimiento en sistemas de alta disponibilidad.</li>
+  </ul>
+      `,
       from: new Date(2021, 5, 1),
       to: new Date(2022, 10, 12),
     },
@@ -71,8 +77,14 @@ export class WelcomePageComponent implements OnInit {
         src: 'https://i.imgur.com/CQMRjRw.png',
         withBackground: true,
       },
-      description:
-        'Creé una aplicación móvil como PWA para calcular el porcentaje de ganancia entre el masoterapeuta y el hotel, según el tipo de servicio ofrecido.',
+      description: `
+    <p>Desarrollo Full Stack del ecosistema digital para <a href="https://temucomasajes.cl" target="_blank"><b>Anami Masoterapia</b></a></p>
+  <ul>
+    <li>Construí una <b>App Mobile</b> y plataforma web con sistema de agendamiento de horas en tiempo real.</li>
+    <li>Implementé una arquitectura <b>Backend</b> robusta gestionando datos con <b>MongoDB</b> y <b>PostgreSQL</b>.</li>
+    <li>Automaticé el flujo de reservas, reduciendo la gestión manual y mejorando la experiencia del usuario.</li>
+  </ul>
+  `,
       from: new Date(2021, 5, 1),
       to: new Date(2022, 10, 12),
     },

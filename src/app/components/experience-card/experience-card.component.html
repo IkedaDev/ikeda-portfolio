@@ -1,13 +1,26 @@
-<article class="experience__card" inViewport classToAdd="animate-fade-in" [work]="'once'">
-    <picture [class.bg]="data().image.withBackground">
-        <img [src]="data().image.src" [alt]="data().title">
-    </picture>
-    <div class="experience__card-info">
-        <h4 class="subtitle experience__card-title">{{data().title}}</h4>
-        <p class="text experience__card-text">{{data().description}}</p>
-        <!-- <div class="experience__card-dates">
-            <span>{{data().from}}</span>
-            <span>{{data().to}}</span>
-        </div> -->
-    </div>
+<article
+  class="experience__card"
+  inViewport
+  classToAdd="animate-fade-in"
+  [work]="'once'"
+>
+  <picture [class.bg]="data().image.withBackground">
+    <img [src]="data().image.src" [alt]="data().title" />
+  </picture>
+  <div class="experience__card-info">
+    <!-- <div class="experience__card-dates">
+      <span class="date">{{ data().from | date : "MMM yyyy" }}</span>
+      <span class="separator">/</span>
+      @if (isCurrent(data().to)) {
+      <span class="date current">Actualidad</span>
+      } @else {
+      <span class="date">{{ data().to | date : "MMM yyyy" }}</span>
+      }
+    </div> -->
+    <h4 class="subtitle experience__card-title">{{ data().title }}</h4>
+    <div
+      class="text experience__card-text"
+      [innerHTML]="data().description"
+    ></div>
+  </div>
 </article>

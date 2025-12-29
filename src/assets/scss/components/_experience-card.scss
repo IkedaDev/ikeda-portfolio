@@ -2,44 +2,98 @@
 @use "../variables/variables" as var;
 @use "../variables/colors" as color;
 
-article.experience__card{
-    
-    background: #374151;
-    padding: 20px;
-    display: flex;
-    border-radius: map.get(var.$border-radius, "default");
-    gap: 20px;
-    flex-wrap: wrap;
-    picture {
-        margin: auto;
-        &.bg{
-            background: map.get(map.get(color.$bg-color,"primary"),"default");
-            padding: 20px;
-        }
-        border-radius: map.get(var.$border-radius, "default");
-        flex-basis: 150px;
-        min-height: 150px;
-        display: flex;
-        align-items: center;
-        img{
-            border-radius: map.get(var.$border-radius, "default");
-            width: 100%;
-            object-position: center;
-        }
-    } 
-    .experience__card-info{
-        flex-grow: 1;
-        width: 400px;
-        color: map.get(color.$text-color,"white");
-        text-align: start;
-        .experience__card-title,.experience__card-text{
-            color: map.get(color.$text-color,"white");
-        }
-        .experience__card-title{
-            margin: 20px 0 10px 0;
-        }
-        .experience__card-text{
-            line-height: 2.4rem;
-        }
+article.experience__card {
+  background: #374151;
+  padding: 20px;
+  display: flex;
+  border-radius: map.get(var.$border-radius, "default");
+  gap: 20px;
+  flex-wrap: wrap;
+
+  picture {
+    margin: auto;
+    &.bg {
+      background: map.get(map.get(color.$bg-color, "primary"), "default");
+      padding: 20px;
     }
+    border-radius: map.get(var.$border-radius, "default");
+    flex-basis: 150px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    img {
+      border-radius: map.get(var.$border-radius, "default");
+      width: 100%;
+      object-position: center;
+    }
+  }
+
+  .experience__card-info {
+    flex-grow: 1;
+    width: 400px;
+    color: map.get(color.$text-color, "white");
+    text-align: start;
+    .experience__card-dates {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem; // Un poco más pequeño que el texto normal
+      font-weight: 600;
+      text-transform: uppercase; // Mayúsculas para estilo "etiqueta"
+      letter-spacing: 0.05em;
+      margin-bottom: 5px; // Separación con el título
+
+      .date {
+        color: map.get(color.$text-color, "grey"); // Color sutil por defecto
+
+        &.current {
+          // Resaltamos "Actualidad" con tu color business (amarillo)
+          color: map.get(color.$business-color, "primary", "default");
+          font-weight: 700;
+        }
+      }
+
+      .separator {
+        color: map.get(color.$text-color, "grey");
+        opacity: 0.5;
+      }
+    }
+
+    .experience__card-title,
+    .experience__card-text {
+      color: map.get(color.$text-color, "white");
+    }
+    .experience__card-title {
+      margin: 20px 0 10px 0;
+    }
+
+    // --- AQUÍ ESTÁN LOS CAMBIOS ---
+    .experience__card-text {
+      line-height: 2.4rem;
+
+      // 1. Separamos los puntos de la lista
+      ul {
+        padding-left: 20px; // Indentación estándar para bullets
+        margin-top: 10px; // Espacio entre el párrafo y la lista
+
+        li {
+          margin-bottom: 5px; // Un poco de aire entre cada punto
+        }
+      }
+
+      // 2. Estilizamos el enlace con tu color corporativo
+      a {
+        // Usamos el amarillo 'business' definido en tus variables
+        color: map.get(color.$business-color, "primary", "default");
+        font-weight: 600; // Un poco más grueso para que destaque
+        text-decoration: none;
+
+        &:hover {
+          // Al pasar el mouse, subrayamos o cambiamos tono (opcional)
+          text-decoration: underline;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
 }
